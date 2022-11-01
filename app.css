@@ -38,7 +38,7 @@ body {
 }
 
 .container {
-	padding: 0 2rem;
+	padding: 0 1.5rem;
 }
 
 button,
@@ -53,8 +53,8 @@ ol, ul {
 }
 
 h1 {
-	margin: 0;
 	color: white;
+	margin-bottom: 0 0 2rem;
 }
 
 a {
@@ -124,8 +124,7 @@ a:hover {
 
 small,
 #todo-form button,
-.stats span,
-h1 span {
+.stats span {
 	font-size: .75rem;
 }
 
@@ -138,18 +137,6 @@ h1 span {
 	background-color: var(--color-header);
 	padding: 3rem 0;
 	margin-bottom: 2rem;
-}
-
-h1 {
-	display: flex;
-	justify-content: space-between;
-	align-items: baseline;
-	margin-bottom: 2rem;
-}
-
-h1 span {
-	color: var(--color-text-muted);
-	font-weight: 400;
 }
 
 
@@ -202,6 +189,7 @@ h1 span {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	transition: var(--global-transition);
 }
 
 .todos li div {
@@ -267,4 +255,56 @@ button svg path {
 
 .todos li button:active svg {
 	transform: scale(.8);
+}
+
+.todos li span {
+	padding: 2px;
+	border-radius: var(--global-border-radius);
+	transition: var(--global-transition);
+}
+
+.todos li span:focus {
+	background-color: var(--color-body);
+	outline: none;
+}
+
+.todos li span[contenteditable]:hover {
+	background-color: var(--color-body);
+}
+
+
+
+/* ================================================= */
+/* 768px and above */
+/* ================================================= */
+@media screen and (min-width: 768px) {
+	.container {
+		max-width: 30rem;
+		margin: 0 auto;
+		position: relative;
+	}
+
+	#todo-form {
+		flex-direction: row;
+	}
+
+	#todo-form input {
+		flex-grow: 1;
+	}
+}
+
+
+
+/* ================================================= */
+/* 1024px and above */
+/* ================================================= */
+@media screen and (min-width: 1024px) {
+	.stats {
+		flex-direction: column;
+		align-items: flex-end;
+		position: absolute;
+		top: 0;
+		transform: translateX(-100%);
+		padding-right: 4rem;
+	}
 }

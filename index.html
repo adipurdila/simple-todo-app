@@ -21,7 +21,7 @@
 	<!-- Main header -->
 	<header id="main-header">
 		<div class="container">
-			<h1>Today<span>Sun Oct 30th</span></h1>
+			<h1>Today</h1>
 
 			<form id="todo-form">
 				<input type="text" name="task-name" placeholder="e.g. Buy groceries" autofocus>
@@ -32,59 +32,23 @@
 
 	<!-- Main content -->
 	<section>
-		<div class="container">
+		<div class="container" id="main-content">
 			<ul class="stats">
 				<li>
 					<span>Remaining</span>
-					<span>1</span>
+					<span id="remaining-tasks">0</span>
 				</li>
 				<li>
 					<span>Completed</span>
-					<span>2</span>
+					<span id="completed-tasks">0</span>
 				</li>
 				<li>
 					<span>Total</span>
-					<span>3</span>
+					<span id="total-tasks">0</span>
 				</li>
 			</ul> <!-- stats -->
 
 			<ul class="todos">
-				<li>
-					<div>
-						<input type="checkbox" name="tasks" id="1">
-						<span contenteditable>Go for a walk</span>
-					</div>
-					<button title="Remove task">
-						<svg viewBox="0 0 24 24" fill="none">
-							<path d="M17.25 17.25L6.75 6.75" stroke="#A4D0E3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-							<path d="M17.25 6.75L6.75 17.25" stroke="#A4D0E3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-						</svg>
-					</button>
-				</li>
-				<li class="complete">
-					<div>
-						<input type="checkbox" name="tasks" id="2" checked>
-						<span>Do the dishes</span>
-					</div>
-					<button title="Remove task">
-						<svg viewBox="0 0 24 24" fill="none">
-							<path d="M17.25 17.25L6.75 6.75" stroke="#A4D0E3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-							<path d="M17.25 6.75L6.75 17.25" stroke="#A4D0E3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-						</svg>
-					</button>
-				</li>
-				<li>
-					<div>
-						<input type="checkbox" name="tasks" id="3">
-						<span contenteditable>Walk the dog</span>
-					</div>
-					<button title="Remove task">
-						<svg viewBox="0 0 24 24" fill="none">
-							<path d="M17.25 17.25L6.75 6.75" stroke="#A4D0E3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-							<path d="M17.25 6.75L6.75 17.25" stroke="#A4D0E3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-						</svg>
-					</button>
-				</li>
 			</ul> <!-- todos -->
 		</div> <!-- container -->
 	</section>
@@ -95,5 +59,7 @@
 			<p><small>Design by <a href="https://adipurdila.com/" target="_blank">Adi Purdila</a>. Code by <a href="https://adipurdila.com/" target="_blank">Adi Purdila</a> and <a href="http://georgemartsoukos.com/" target="_blank">George Martsoukos</a>.</small></p>
 		</div>
 	</footer>
+
+	<script src="app.js"></script>
 </body>
 </html>
